@@ -1,0 +1,28 @@
+src 2001:1890:1f8:2019::1:1 dst 2600:380:a5a7:7989:0:6c:5a15:4901
+        proto esp spi 0x0000b2ed reqid 12 mode transport
+        replay-window 4
+        auth-trunc hmac(md5) 0x8549f88c60c8b66d9944b74328aea84c 96
+        enc cbc(aes) 0x8299a16c77ba5e3d55eb47155485e9b7
+        anti-replay context: seq 0x28, oseq 0x0, bitmap 0xffffffff
+        sel src ::/0 dst ::/0
+src 2600:380:a5a7:7989:0:6c:5a15:4901 dst 2001:1890:1f8:2019::1:1
+        proto esp spi 0x008f3fd5 reqid 11 mode transport
+        replay-window 4
+        auth-trunc hmac(md5) 0x8549f88c60c8b66d9944b74328aea84c 96
+        enc cbc(aes) 0x8299a16c77ba5e3d55eb47155485e9b7
+        anti-replay context: seq 0x0, oseq 0x1f, bitmap 0x00000000
+        sel src ::/0 dst ::/0
+src 2001:1890:1f8:2019::1:1 dst 2600:380:a5a7:7989:0:6c:5a15:4901
+        proto esp spi 0x0000b2ec reqid 10 mode transport
+        replay-window 4
+        auth-trunc hmac(md5) 0x8549f88c60c8b66d9944b74328aea84c 96
+        enc cbc(aes) 0x8299a16c77ba5e3d55eb47155485e9b7
+        anti-replay context: seq 0x11, oseq 0x0, bitmap 0x0001ffff
+        sel src ::/0 dst ::/0
+src 2600:380:a5a7:7989:0:6c:5a15:4901 dst 2001:1890:1f8:2019::1:1
+        proto esp spi 0x008f3fd4 reqid 9 mode transport
+        replay-window 4
+        auth-trunc hmac(md5) 0x8549f88c60c8b66d9944b74328aea84c 96
+        enc cbc(aes) 0x8299a16c77ba5e3d55eb47155485e9b7
+        anti-replay context: seq 0x0, oseq 0x1a, bitmap 0x00000000
+        sel src ::/0 dst ::/0

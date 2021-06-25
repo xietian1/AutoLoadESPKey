@@ -5,25 +5,10 @@ import os
 import subprocess
 from os.path import expanduser
 
-home = expanduser("~")
 
-"""
-_set = set()
-
-readfile = open('testfile.txt', 'r')
-for line in readfile:
-    tmp = line.split(',')
-    _set.add(tmp[3][1:-1]) #add existing to hashset
-readfile.close()
-"""
 
 rnt = subprocess.check_output(["adb", "shell", "su", "-c", "ip xfrm state"])
 xfrm_rnt = str(rnt).split("\\r\\n")
-
-"""
-myfile = open(home+'.config\wireshark\esp_sa', 'a')
-"""
-
 
 
 for i in range(4):
@@ -43,12 +28,5 @@ for i in range(4):
 
 
     #print string directly to terminal
-    print('"IPv6","' + src + '","' + dst + '","' + spi + '","AES-CBC [RFC3602]","' + auth_key + '","HMAC-MD5-96 [RFC2403]","'+encryption_key + '"\n')
-    """
-    if spi not in _set:
-        myfile.write('"IPv6","' + src + '","' + dst + '","' + spi + '","AES-CBC [RFC3602]","' + auth_key + '","HMAC-MD5-96 [RFC2403]","'+encryption_key + '"\n')
-    else:
-        print("SPI:" + spi + " already exists")
-    """
-#myfile.close()
+    print('"IPv6","' + src + '","' + dst + '","' + spi + '","AES-CBC [RFC3602]","' + encryption_key + '","HMAC-MD5-96 [RFC2403]","' + auth_key + '"\n')
 
